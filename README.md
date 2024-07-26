@@ -1,3 +1,6 @@
-# Sabine-SummerSchool
+# SabineSummerSchool 2024 - cypress, javascript
 
-TDL Summer School
+
+## npm scripts
+### code formatting
+This project uses prettier package to format the code. Run the command: **npm run format**
