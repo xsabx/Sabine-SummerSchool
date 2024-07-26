@@ -10,6 +10,6 @@
 
 // console.log(testNumber(1));
 
-let number = 0; 
-const NUMBER = number > 0 ? 'Number is positive' : 'Number is negative';
-console.log (NUMBER);
+let number = 0;
+const NUMBER = number > 0 ? "Number is positive" : "Number is negative";
+console.log(NUMBER);
