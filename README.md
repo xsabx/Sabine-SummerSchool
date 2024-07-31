@@ -15,6 +15,37 @@ The `Complete Workflow` test suite includes the following tests:
 7. **View order history**: Tests navigating to and viewing the order history.
 8. **Log out functionality**: Tests the user logout process.
 
+## Additional tests
+
+### `profileEditFunctionality.cy.js`
+
+This test file tests the profile editing functionality. It includes:
+
+- Navigating to the profile page
+- Editing user information (phone number)
+- Verifying that the changes are saved and reflected correctly
+
+### `languageChangeVerification.cy.js`
+This test file verifies that the language change functionality works correctly. It includes:
+
+- Navigating to the language settings
+- Changing the language
+- Verifying that the language has been updated across the application
+
+### `redirectedToSignUp.cy.js`
+
+This test file tests the redirection to the signup page. It includes:
+
+- Verifying that users can be redirected to the signup page if they don't have an account
+
+### `tableViewFunctionality.cy.js`
+
+This test file tests the table view functionality in the store. It includes:
+
+- Navigating to the table view
+- Verifying that table data is displayed correctly
+
+
 ## Page Object Model (POM)
 
 The project follows the Page Object Model (POM) design pattern to organize the code better and make it more maintainable.

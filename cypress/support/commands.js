@@ -45,5 +45,9 @@ Cypress.Commands.add("sessionLogin", (email, password) => {
     cy.getByTestId("password-input").type(password);
     cy.getByTestId("sign-in-button").click();
     Home.elements.headerLink().should("contain.text", "Store of Excellence");
-  });
+    });
+});   
+
+Cypress.Commands.add("checkUrl", (expectedValue) => {
+    cy.url().should('include', expectedValue);
 });
