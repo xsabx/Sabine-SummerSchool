@@ -4,7 +4,8 @@
   "description": "Cypress project TDL",
   "main": "comments.js",
   "scripts": {
-    "format": "npx prettier . --write"
+    "format": "npx prettier . --write",
+    "cypressopen": "npx cypress open"
   },
   "author": "Sabine Sinicina",
   "license": "ISC",
