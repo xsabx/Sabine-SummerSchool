@@ -3,6 +3,7 @@ class Login {
     emailInput: () => cy.getByTestId("email-input"),
     passwordInput: () => cy.getByTestId("password-input"),
     signInButton: () => cy.getByTestId("sign-in-button"),
+    joinUsButton: () =>  cy.getByTestId("register-button"),
   };
 
   actions = {
