@@ -5,12 +5,14 @@
   "main": "comments.js",
   "scripts": {
     "format": "npx prettier . --write",
-    "cypressopen": "npx cypress open"
+    "cypressopen": "npx cypress open",
+    "reports-clenup": "rm -r ./mochawesome-report"
   },
   "author": "Sabine Sinicina",
   "license": "ISC",
   "dependencies": {
     "cypress": "^13.13.1",
+    "mochawesome": "^7.1.3",
     "prettier": "^3.3.3"
   }
 }
