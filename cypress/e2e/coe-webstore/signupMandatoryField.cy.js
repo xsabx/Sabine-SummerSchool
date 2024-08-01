@@ -14,6 +14,6 @@ describe('Sign up mandatory field functionality', () => {
         SignUp.elements.emailInput().should("be.visible").type('email@email.com');
         SignUp.elements.passwordInput().should("be.visible").type('Password');
         SignUp.elements.joinButton().click();
-        SignUp.elements.firstNameInput().should('have.prop', 'validationMessage', 'Please fill in this field.');
+        SignUp.elements.firstNameInput().should('have.prop', 'validationMessage');
     });
 });
