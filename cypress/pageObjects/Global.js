@@ -9,6 +9,7 @@ class Global {
     languageOption: (language) => cy.contains(language),
   };
 
+  // side menu actions
   navigateSideMenu = {
     openPage: (pageName) => {
       this.elements.sideMenu().click();

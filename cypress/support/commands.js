@@ -30,6 +30,7 @@ Cypress.Commands.add("getByTestId", (id) => {
   cy.get(`[data-testid=${id}]`);
 });
 
+//Command for login without login session
 Cypress.Commands.add("login", (email, password) => {
   cy.visit("/");
   cy.getByTestId("email-input").type(email);
@@ -38,6 +39,7 @@ Cypress.Commands.add("login", (email, password) => {
   Home.elements.headerLink().should("contain.text", "Store of Excellence");
 });
 
+//Command for login with login session
 Cypress.Commands.add("sessionLogin", (email, password) => {
   cy.session([email, password], () => {
     cy.visit("/");
@@ -48,6 +50,7 @@ Cypress.Commands.add("sessionLogin", (email, password) => {
     });
 });   
 
+//Command for URL checking
 Cypress.Commands.add("checkUrl", (expectedValue) => {
     cy.url().should('include', expectedValue);
 });

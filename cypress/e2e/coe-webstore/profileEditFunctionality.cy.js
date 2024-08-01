@@ -1,5 +1,4 @@
 import Dashboard from "../../pageObjects/Dashboard";
-
 // https://tdlschool.atlassian.net/browse/TSS22N-200
 
 describe('profile edit functionality', () => {
