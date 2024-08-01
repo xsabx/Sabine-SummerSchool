@@ -9,7 +9,7 @@ class Home {
       cy.visit("/us");
       this.elements.headerLink().click();
       Global.navigateSideMenu.openPage("Store");
-      cy.url().should("include", "/store");
+      cy.url().should("include", "/store"); // TODO: use your own cy.checkUrl command
     },
   };
 };
