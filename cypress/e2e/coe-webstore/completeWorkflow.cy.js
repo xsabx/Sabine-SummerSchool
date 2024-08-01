@@ -11,26 +11,27 @@ describe("Complete Workflow", () => {
     cy.sessionLogin(Cypress.env("username"), Cypress.env("password"));
   });
 
-  it("Logs in functionality", () => {
+  it("Logs in functionality", () => { //no need to log in because its already done before each test, this checks if its working
     cy.visit("/");
     Home.elements.headerLink().should("contain.text", "Store of Excellence");
   });
 
   it("Add to cart functionality", () => {
     cy.visit("/us");
-    Home.actions.navigateToStore();
+    Home.actions.navigateToStore(); //function that navigates to the store page (also checks it)
     StorePage.elements.productWrapper().click();
     ProductPage.elements.productOptions().click();
     ProductPage.elements.addProductButton().click();
+    cy.wait(1000); //waits for product to show in the cart
   });
 
   it("Proceed to Checkout", () => {
     cy.visit("/store");
-    Global.navigateSideMenu.openPage("Cart");
+    Global.navigateSideMenu.openPage("Cart"); //takes to cart from store page (using side menu)
     Cart.elements.checkoutButton().click();
   });
 
-  it("Enters shipping address information", () => {
+  it("Checkout functionality", () => {
     const shippingInfo = {
       firstName: "User",
       lastName: "One",
@@ -41,33 +42,24 @@ describe("Complete Workflow", () => {
     };
 
     cy.visit("/checkout?step=address");
-    Checkout.fillForm(shippingInfo);
+    Checkout.fillForm(shippingInfo); //Uses function to fill in form with given const 
     Checkout.elements.addAddressButton().click();
-  });
-
-  it("Enters delivery information", () => {
-    cy.visit("/checkout?step=delivery");
     Checkout.elements.deliveryOption().click();
     Checkout.elements.addDeliveryButton().click();
-  });
-
-  it("Makes payment and places order", () => {
-    cy.visit("/checkout?step=payment");
-    Checkout.submitPayment();
+    Checkout.submitPayment(); //function for payment submition is used
     Checkout.elements.orderButton().click();
-    Global.navigateSideMenu.openPage("Home");
   });
 
   it("View order history", () => {
     cy.visit("/");
     Dashboard.elements.dashboardLink().click();
     Dashboard.elements.ordersLink().click();
-    Dashboard.verifyOrderCard();
+    Dashboard.verifyOrderCard(); //function for verifying if order card is shown
   });
 
   it("Log out functionality (side menu)", () => {
     cy.visit("/");
-    Global.logout();
-    cy.url().should("include", "/us/sign-in");
+    Global.logout(); //logout function from global class
+    cy.checkUrl('/us/sign-in'); //command for correct URL checking is used
   });
 });

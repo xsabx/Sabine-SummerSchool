@@ -9,11 +9,9 @@ The `Complete Workflow` test suite includes the following tests:
 1. **Logs in functionality**: Tests the user login process.
 2. **Add to cart functionality**: Tests adding a product to the cart.
 3. **Proceed to Checkout**: Tests the checkout process from the store page.
-4. **Enters shipping address information**: Tests filling out the shipping address form.
-5. **Enters delivery information**: Tests selecting and submitting the delivery option.
-6. **Makes payment to place order**: Tests the payment process and placing the order.
-7. **View order history**: Tests navigating to and viewing the order history.
-8. **Log out functionality**: Tests the user logout process.
+4. **Checkout functioanlity**: Tests filling out the information forms, placing order.
+5. **View order history**: Tests navigating to and viewing the order history.
+6. **Log out functionality**: Tests the user logout process.
 
 ## Additional tests
 
@@ -52,6 +50,13 @@ This test file tests the functioanlity of mandatory fields in signup page:
 - Navigating to the sign up
 - Leave firstname input field (mandatory field) empty
 - Verifying that error message is displayed
+
+### `socialMediaLinkVerification.cy.js`
+
+This test file tests the functioanlity of social media icons (URL they take to):
+
+- Navigating to home page
+- Verifying URL's of social media icons
 
 
 ## Page Object Model (POM)
@@ -101,3 +106,7 @@ This project uses prettier package to format the code. Run the command: **npm ru
 ### Running the Tests in cypress
 
 Cypress is opened with the command: **npm run cypressopen**
+
+### Mochawesome report cleanup
+
+You can clean up Mochawesome reports with the command : **npm run reports-clenup**

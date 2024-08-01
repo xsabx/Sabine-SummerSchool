@@ -8,12 +8,9 @@ class Checkout {
     countrySelect: () => cy.getByTestId("shipping-country-select"),
 
     addAddressButton: () => cy.getByTestId("submit-address-button"),
-
     deliveryOption: () => cy.contains("FakeEx Standard"),
     addDeliveryButton: () => cy.getByTestId("submit-delivery-option-button"),
-
     paymentButton: () => cy.getByTestId("submit-payment-button"),
-    
     orderButton: () => cy.getByTestId("submit-order-button"),
   };
 
@@ -28,7 +25,7 @@ class Checkout {
 
   submitPayment() {
     this.elements.paymentButton().should("be.visible").click();
-    cy.url().should("include", "/checkout?step=review");
+    cy.checkUrl('/checkout?step=review');
   };
 };
 
