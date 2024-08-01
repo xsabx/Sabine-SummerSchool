@@ -3,6 +3,7 @@ import Home from "../../pageObjects/Home";
 import StorePage from "../../pageObjects/StorePage";
 import ProductPage from "../../pageObjects/ProductPage";
 import Cart from "../../pageObjects/Cart";
+https://tdlschool.atlassian.net/browse/TSS22N-213
 
 describe('Product deletion from cart', () => {
     it('verify product deletion from cart', () => {
