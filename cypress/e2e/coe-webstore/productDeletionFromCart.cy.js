@@ -4,8 +4,8 @@ import StorePage from "../../pageObjects/StorePage";
 import ProductPage from "../../pageObjects/ProductPage";
 import Cart from "../../pageObjects/Cart";
 
-describe('redirected to signup', () => {
-    it('Redirects to sign-up if unauthenticated', () => {
+describe('Product deletio from cart', () => {
+    it('verify product deletio from cart', () => {
         cy.login(Cypress.env("username"), Cypress.env("password")); // logs in
         Home.actions.navigateToStore(); //function that navigates to the store page (also checks it)
         StorePage.elements.productWrapper().click();
