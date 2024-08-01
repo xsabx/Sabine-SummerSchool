@@ -8,7 +8,7 @@ class Checkout {
     countrySelect: () => cy.getByTestId("shipping-country-select"),
 
     addAddressButton: () => cy.getByTestId("submit-address-button"),
-    deliveryOption: () => cy.contains("FakeEx Standard"),
+    deliveryOption: () => cy.contains("FakeEx Standard"),   // TODO: try to rewrite with dynamic parameter so we can select also other (FakeEx Express) option
     addDeliveryButton: () => cy.getByTestId("submit-delivery-option-button"),
     paymentButton: () => cy.getByTestId("submit-payment-button"),
     orderButton: () => cy.getByTestId("submit-order-button"),
