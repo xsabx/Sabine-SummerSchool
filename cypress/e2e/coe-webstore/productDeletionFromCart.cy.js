@@ -12,8 +12,8 @@ describe('redirected to signup', () => {
         ProductPage.elements.productOptions().click();
         ProductPage.elements.addProductButton().click();
         cy.wait(1000); //waits for product to show in the cart
-        Cart.elements.deleteButton().click(); 
         Global.navigateSideMenu.openPage("Cart");
+        Cart.elements.deleteButton().click(); 
         cy.contains("You don't have anything in your cart. Let's change that, use the link below to start browsing our products.")
   .should('be.visible');
     });
