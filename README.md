@@ -45,6 +45,14 @@ This test file tests the table view functionality in the store. It includes:
 - Navigating to the table view
 - Verifying that table data is displayed correctly
 
+### `signupMandatoryField.cy.js`
+
+This test file tests the functioanlity of mandatory fields in signup page:
+
+- Navigating to the sign up
+- Leave firstname input field (mandatory field) empty
+- Verifying that error message is displayed
+
 
 ## Page Object Model (POM)
 
